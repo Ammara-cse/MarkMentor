@@ -57,18 +57,18 @@ Follow these steps to set up the project on your local system:
    git clone [https://github.com/Ammara-cse/MarkMentor.git](https://github.com/Ammara-cse/MarkMentor.git)
    cd MarkMentor
 
-1. Install Composer Dependencies:
+## 1. Install Composer Dependencies:<br>
    composer install
 
-2.Install NPM Packages:
+## 2.Install NPM Packages:<br>
 npm install
 
-3.Environment Configuration:
+## 3.Environment Configuration:<br>
 Create a .env file by copying .env.example:
 cp .env.example .env
 
 
-Configure your MySQL database settings in the .env file:
+## Configure your MySQL database settings in the .env file:<br>
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -76,26 +76,26 @@ DB_DATABASE=markmentor_db
 DB_USERNAME=root
 DB_PASSWORD=
 
-4.Generate Application Key:
+## 4.Generate Application Key:<br>
 php artisan key:generate
 
 
-5.Run Database Migrations and Seeders:
+## 5.Run Database Migrations and Seeders:<br>
 php artisan migrate --seed
 
 
-6.Start the Development Server:
+## 6.Start the Development Server:<br>
 php artisan serve
 Access the application in your browser at: http://127.0.0.1:8000
 
 8000
 
 ---
-## 👥 Authors & Academic Credits
-## Sara Wadhaval (PRN: 24030332905055)<br>
-## Ammara Sirkhot (PRN: 24030332905059)<br>
-## Under the Guidance of: Prof. Pranali Bhosale<br>
-## Head of Department: Dr. Arvind Kiwelekar<br>
-## Department: Department of Computer Science and Engineering<br>
+# 👥 Authors & Academic Credits
+# Sara Wadhaval (PRN: 24030332905055)<br>
+# Ammara Sirkhot (PRN: 24030332905059)<br>
+# Under the Guidance of: Prof. Pranali Bhosale<br>
+# Head of Department: Dr. Arvind Kiwelekar<br>
+# Department: Department of Computer Science and Engineering<br>
 ## University: Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Raigad, Maharashtra, India.<br>
 ## Academic Year: 2025–2026
