@@ -82,7 +82,7 @@ cd MarkMentor
 composer install
 npm install
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 Duplicate the example environment file and generate an application encryption key:
 cp .env.example .env
 php artisan key:generate
@@ -95,15 +95,15 @@ DB_DATABASE=markmentor_db
 DB_USERNAME=root
 DB_PASSWORD=
 
-4. Run Migrations & Seeders
+### 4. Run Migrations & Seeders
 php artisan migrate --seed
 
-5. Launch the Development Server
+### 5. Launch the Development Server
 php artisan serve
 
 > Open your browser and navigate to http://127.0.0.1:8000
 > 
-👥 Author & Academic Credits
+### 👥 Author & Academic Credits
 | Role | Details |
 |---|---|
 | Developer | Ammara Sirkhot (PRN: 24030332905059) |
@@ -112,11 +112,4 @@ php artisan serve
 | Department | Department of Computer Science and Engineering |
 | Institution | Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Raigad, Maharashtra |
 | Academic Year | 2025–2026 |
-
-### Key Improvements Made:
-* **Fixed Broken Syntax:** Closed unclosed code blocks, fixed the broken `git clone` Markdown link, removed stray `8000` text, and fixed the broken `Version Control` bullet wrap.
-* **Structured Tables:** Converted the assessment weights, tech stack, and academic credits into clean, scannable GitHub-flavored Markdown tables.
-* **Consistent Hierarchy:** Standardized heading levels (`#`, `##`, `###`) and replaced manual `<br>` tags with clean Markdown spacing.
-
-<FollowUp label="Want me to add a Project Folder Structure section or sample CSV format guide to this README?" query="Add a clean Project Folder Structure tree and a Sample CSV Import Format section to the MarkMentor README."/>
 
