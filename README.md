@@ -1,93 +1,213 @@
+🎓 MarkMentor
 
+Smart Internal Marks Management & Academic Analytics Portal
 
-# 🎓 MarkMentor
-### Smart Internal Marks Management & Academic Analytics Portal
+<p align="center">An academic management system designed to automate internal assessment, result evaluation, and student performance analytics.
 
-<p>
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
-  <img src="https://img.shields.io/badge/PHP_8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-</p>
+<br/><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
+<img src="https://img.shields.io/badge/PHP_8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+<img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/><br/><img src="https://img.shields.io/badge/Architecture-Laravel%20MVC-0F172A?style=flat-square" alt="Architecture"/>
+<img src="https://img.shields.io/badge/Database-MySQL-0F172A?style=flat-square" alt="Database"/>
+<img src="https://img.shields.io/badge/Status-Active-0F172A?style=flat-square" alt="Status"/></p>---
 
-<p>
-  <strong>An enterprise-grade academic portal engineered to automate, audit, and visualize student evaluation matrices within university frameworks.</strong>
-</p>
+📌 Overview
 
-</div>
+MarkMentor is a role-based academic portal developed to replace manual mark registers and error-prone spreadsheets with a centralized database-driven system.
 
----
+The system is designed around DBATU's internal assessment structure and provides automated result evaluation, role-based access, bulk mark ingestion, student performance analytics, and academic risk identification.
 
-## 📖 Overview
+Core Objectives
 
-**MarkMentor** replaces manual registers and error-prone spreadsheets with a centralized, role-secured database environment built on the **Laravel MVC architecture**. Designed specifically around **Dr. Babasaheb Ambedkar Technological University (DBATU)** assessment standards, it ensures real-time access control, automated pass/fail auditing, and transparent performance analytics for both faculty and students.
-
----
-
-## 🚀 Key Features
-
-### ⚙️ Data Ingestion & Integrity
-* **Automated CSV Bulk Ingestion:** Upload division-wide student records and subject marks in a single batch operation.
-* **PRN Scientific Notation Recovery:** Eliminates spreadsheet corruption where 12-digit Permanent Registration Numbers (PRNs) collapse into scientific notation (e.g., `2.26E+11`) using regex validation and float-to-string normalization.
-
-### 📊 Academic Intelligence & Analytics
-* **DBATU Evaluation Rule Engine:** Automatically computes aggregate totals and enforces university passing thresholds across all components.
-* **🏆 Top Performers Podium:** Programmatically ranks and highlights high-achieving students across modules.
-* **⚠️ Critical Failure Watchlist:** Automatically flags at-risk students falling below passing criteria to enable timely faculty intervention.
-
-### 🔐 Role-Based Access Control (RBAC)
-* **Teacher Console:** Comprehensive dashboard for CSV imports, granular mark adjustments, cohort analytics, and audit logs.
-* **Student Portal:** Isolated, read-only profile displaying subject-wise breakdowns, continuous assessment progress, and pass/fail indicators.
+- Centralize student academic records
+- Automate internal mark calculations
+- Apply predefined pass/fail rules consistently
+- Reduce manual data-entry and calculation errors
+- Provide teachers with actionable academic analytics
+- Give students a transparent view of their academic performance
 
 ---
 
-## 📐 Grading Matrix & Evaluation Rules
+✨ Key Features
 
-### Assessment Structure
-| Component | Code | Maximum Marks | Weightage |
-| :--- | :---: | :---: | :---: |
-| **Continuous Assessment** | `CA` | 20 | 20% |
-| **Mid-Semester Examination** | `MSE` | 20 | 20% |
-| **End-Semester Examination** | `ESE` | 60 | 60% |
-| **Aggregate Total** | **`TOTAL`** | **100** | **100%** |
+📥 1. Data Ingestion & Integrity
 
-### Mathematical Evaluation Logic
-$$\text{Total Course Score} = \text{CA} + \text{MSE} + \text{ESE}$$
+CSV Bulk Import
 
-$$\text{Result Status} = \begin{cases} \text{PASS} & \text{if } \text{ESE} \ge 20 \text{ and } \text{Total Course Score} \ge 40 \\ \text{FAIL} & \text{otherwise} \end{cases}$$
+Import division-level student records and subject marks through a single CSV upload workflow.
 
----
+PRN Scientific-Notation Recovery
 
-## 🛠️ Tech Stack
+Handles spreadsheet corruption where long PRNs may be converted into scientific notation.
 
-| Layer | Technology |
-| :--- | :--- |
-| **Backend Framework** | PHP 8.x, Laravel MVC |
-| **Frontend & Templating** | Laravel Blade, HTML5, CSS3, Bootstrap 5 |
-| **Database** | MySQL Relational Database Management System (RDBMS) |
-| **Security & Auth** | Laravel Native Auth, CSRF Middleware, Bcrypt Password Hashing |
-| **Version Control** | Git & GitHub |
+Example:
+
+Original PRN
+22603032905059
+
+Corrupted spreadsheet value
+2.2603E+13
+
+Recovered PRN
+22603032905059
+
+The ingestion layer validates and normalizes PRN values before storing them in the database.
 
 ---
 
-## ⚙️ Installation & Local Setup
+📊 2. Academic Intelligence & Analytics
 
-Follow these steps to deploy **MarkMentor** locally:
+Automated Result Evaluation
 
-### 1. Clone the Repository
-git clone [https://github.com/Ammara-cse/MarkMentor.git](https://github.com/Ammara-cse/MarkMentor.git)
+MarkMentor calculates aggregate marks and applies the configured DBATU evaluation rules automatically.
+
+Top Performers
+
+Ranks students based on academic performance and highlights high-performing students.
+
+Critical Failure Watchlist
+
+Identifies students who do not satisfy the required passing criteria, allowing faculty to quickly identify students who may require academic support.
+
+---
+
+🔐 3. Role-Based Access Control
+
+Role| Capabilities
+Teacher| Import marks, edit records, view analytics, monitor students
+Student| View personal marks, subject-wise performance and result status
+
+The student interface is designed as a read-only academic profile, while teachers receive administrative and analytical capabilities.
+
+---
+
+📐 Evaluation Rules
+
+Assessment Structure
+
+Component| Code| Maximum Marks| Weightage
+Continuous Assessment| "CA"| 20| 20%
+Mid-Semester Examination| "MSE"| 20| 20%
+End-Semester Examination| "ESE"| 60| 60%
+Total| "TOTAL"| 100| 100%
+
+Result Calculation
+
+Total = CA + MSE + ESE
+
+Pass Criteria
+
+A student is considered PASS when:
+
+ESE >= 20
+AND
+Total >= 40
+
+Otherwise:
+
+FAIL
+
+This rule is implemented programmatically to ensure consistent evaluation across student records.
+
+---
+
+🏗️ System Architecture
+
+                    ┌─────────────────────┐
+                    │      User Layer     │
+                    │ Teacher / Student   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Laravel Web Layer │
+                    │ Routes / Controllers │
+                    │       / Blade       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Business Logic    │
+                    │ Evaluation / RBAC    │
+                    │ Analytics / Import   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │       MySQL         │
+                    │ Relational Database  │
+                    └─────────────────────┘
+
+---
+
+🛠️ Technology Stack
+
+Layer| Technology
+Backend| PHP 8.x
+Framework| Laravel
+Architecture| MVC
+Frontend| HTML5, CSS3, Bootstrap 5
+Templating| Laravel Blade
+Database| MySQL
+Authentication| Laravel Authentication
+Security| CSRF Protection, Bcrypt Password Hashing
+Data Import| CSV
+Version Control| Git & GitHub
+
+---
+
+📁 Project Structure
+
+MarkMentor/
+│
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   └── ...
+│
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│
+├── resources/
+│   └── views/
+│
+├── routes/
+│   └── web.php
+│
+├── public/
+│
+├── .env.example
+├── composer.json
+├── package.json
+└── README.md
+
+---
+
+⚙️ Installation & Local Setup
+
+1. Clone the Repository
+
+git clone https://github.com/Ammara-cse/MarkMentor.git
 cd MarkMentor
 
-### 2. Install Backend & Frontend Dependencies
+2. Install Dependencies
+
 composer install
 npm install
 
-### 3. Configure Environment Variables
-Duplicate the example environment file and generate an application encryption key:
+3. Configure Environment
+
+Create the environment file:
+
 cp .env.example .env
+
+Generate the Laravel application key:
+
 php artisan key:generate
 
-Open .env and update your MySQL database credentials:
+Configure your MySQL database inside ".env":
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -95,21 +215,91 @@ DB_DATABASE=markmentor_db
 DB_USERNAME=root
 DB_PASSWORD=
 
-### 4. Run Migrations & Seeders
+4. Run Database Migrations
+
 php artisan migrate --seed
 
-### 5. Launch the Development Server
+5. Start the Development Server
+
 php artisan serve
 
-> Open your browser and navigate to http://127.0.0.1:8000
-> 
-### 👥 Author & Academic Credits
-| Role | Details |
-|---|---|
-| Developer | Ammara Sirkhot (PRN: 24030332905059) |
-| Project Guide | Prof. Pranali Bhosale |
-| Head of Department | Dr. Arvind Kiwelekar |
-| Department | Department of Computer Science and Engineering |
-| Institution | Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Raigad, Maharashtra |
-| Academic Year | 2025–2026 |
+Open:
 
+http://127.0.0.1:8000
+
+---
+
+🔒 Security Considerations
+
+MarkMentor incorporates several application-level security mechanisms:
+
+- Role-based access control
+- CSRF protection through Laravel middleware
+- Password hashing using Bcrypt
+- Server-side validation
+- Controlled student access to academic records
+- Database-backed authentication
+
+«Production deployment should additionally configure HTTPS, secure environment variables, database backups, rate limiting, and production-grade authentication policies.»
+
+---
+
+📈 Future Enhancements
+
+Potential improvements include:
+
+- 📱 Responsive mobile-first student portal
+- 📊 Interactive performance dashboards
+- 📈 Subject-wise performance trends
+- 📧 Automated academic alerts
+- 📄 PDF result generation
+- 🔔 Faculty notification system
+- 🧠 Predictive identification of academically at-risk students
+- 📚 Multi-semester academic history
+- ☁️ Cloud deployment and centralized hosting
+
+---
+
+🎯 Project Impact
+
+MarkMentor demonstrates how a traditional academic workflow can be transformed into a centralized, automated and analytics-driven information system.
+
+The project focuses on:
+
+Manual Data → Structured Data → Automated Evaluation → Actionable Analytics
+
+This reduces repetitive faculty work while improving consistency, visibility, and accessibility of academic information.
+
+---
+
+👩‍💻 Author
+
+Ammara Sirkhot
+
+Department of Computer Science & Engineering
+Dr. Babasaheb Ambedkar Technological University (DBATU)
+Lonere, Raigad, Maharashtra, India
+
+Academic Year: 2025–2026
+
+Project Guide
+
+Prof. Pranali Bhosale
+
+Head of Department
+
+Dr. Arvind Kiwelekar
+
+---
+
+⭐ Acknowledgement
+
+Developed as an academic project for exploring web application development, database management, role-based security, automation, and academic analytics using the Laravel ecosystem.
+
+---
+
+<p align="center">⭐ If you find this project useful, consider starring the repository!
+
+MarkMentor — Making Academic Data Smarter.
+
+</p>
