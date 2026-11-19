@@ -75,11 +75,10 @@ $$\text{Result Status} = \begin{cases} \text{PASS} & \text{if } \text{ESE} \ge 2
 Follow these steps to deploy **MarkMentor** locally:
 
 ### 1. Clone the Repository
-```bash
 git clone [https://github.com/Ammara-cse/MarkMentor.git](https://github.com/Ammara-cse/MarkMentor.git)
 cd MarkMentor
 
-2. Install Backend & Frontend Dependencies
+### 2. Install Backend & Frontend Dependencies
 composer install
 npm install
 
