@@ -92,7 +92,6 @@ Access the application in your browser at: http://127.0.0.1:8000
 
 ---
 # 👥 Authors & Academic Credits
-### Sara Wadhaval (PRN: 24030332905055)<br>
 ### Ammara Sirkhot (PRN: 24030332905059)<br>
 ### Under the Guidance of: Prof. Pranali Bhosale<br>
 ### Head of Department: Dr. Arvind Kiwelekar<br>
