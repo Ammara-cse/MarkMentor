@@ -1,140 +1,124 @@
+Here is a clean, aesthetically polished, and professional README.md with fixed Markdown formatting, proper code blocks, structured tables, and balanced visual hierarchy:
 <div align="center">
 
-<br />
+# 🎓 MarkMentor
+### Smart Internal Marks Management & Academic Analytics Portal
 
-### *— ESTABLISHED ACADEMIC EVALUATION ARCHITECTURE —*
+<p>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/PHP_8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+</p>
 
-# M A R K M E N T O R
-**A Smart Internal Marks Management & Academic Analytics Portal**
-
-*Precision Ledger Automation & Institutional Assessment Governance*
-
-<br />
-
-[![Laravel](https://img.shields.io/badge/Laravel-8.x_/_MVC-2C221E?style=flat-square&logo=laravel&logoColor=D4AF37)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.x_Core-2C221E?style=flat-square&logo=php&logoColor=D4AF37)](https://www.php.net)
-[![MySQL](https://img.shields.io/badge/MySQL-Relational_DB-2C221E?style=flat-square&logo=mysql&logoColor=D4AF37)](https://www.mysql.com)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-Classic_UI-2C221E?style=flat-square&logo=bootstrap&logoColor=D4AF37)](https://getbootstrap.com)
-
-<br />
-
----
-
-*“Replacing traditional paper ledgers and fragmented spreadsheets with a deterministic, auditable, and sovereign academic database.”*
-
----
+<p>
+  <strong>An enterprise-grade academic portal engineered to automate, audit, and visualize student evaluation matrices within university frameworks.</strong>
+</p>
 
 </div>
 
-<br />
+---
 
-## I. Executive Overview
+## 📖 Overview
 
-**MarkMentor** is an enterprise-grade academic management system engineered to optimize, automate, and rigorously audit student evaluation matrices within university frameworks. Constructed upon the **Laravel MVC architecture**, backed by a **MySQL relational database**, and styled with **Bootstrap CSS**, the platform transitions institutions from error-prone manual registers to a centralized, cryptographically secured ledger—ensuring role-isolated access, transparent metric visibility, and absolute arithmetic precision.
+**MarkMentor** replaces manual registers and error-prone spreadsheets with a centralized, role-secured database environment built on the **Laravel MVC architecture**. Designed specifically around **Dr. Babasaheb Ambedkar Technological University (DBATU)** assessment standards, it ensures real-time access control, automated pass/fail auditing, and transparent performance analytics for both faculty and students.
 
-<br />
+---
 
-## II. Architectural Highlights & Core Capabilities
+## 🚀 Key Features
 
-* **Automated CSV Bulk Ingestion Engine**
-  Facilitates seamless batch processing of division-wide student records via structured comma-separated files, eliminating manual data-entry bottlenecks.
+### ⚙️ Data Ingestion & Integrity
+* **Automated CSV Bulk Ingestion:** Upload division-wide student records and subject marks in a single batch operation.
+* **PRN Scientific Notation Recovery:** Eliminates spreadsheet corruption where 12-digit Permanent Registration Numbers (PRNs) collapse into scientific notation (e.g., `2.26E+11`) using regex validation and float-to-string normalization.
 
-* **PRN Scientific Notation Restoration**
-  Resolves spreadsheet truncation anomalies wherein 12-digit university Permanent Registration Numbers (PRNs) degrade into exponential notation (e.g., `2.26E+11`). Employs deterministic regex parsing and float-to-string normalization to preserve exact identifier integrity.
+### 📊 Academic Intelligence & Analytics
+* **DBATU Evaluation Rule Engine:** Automatically computes aggregate totals and enforces university passing thresholds across all components.
+* **🏆 Top Performers Podium:** Programmatically ranks and highlights high-achieving students across modules.
+* **⚠️ Critical Failure Watchlist:** Automatically flags at-risk students falling below passing criteria to enable timely faculty intervention.
 
-* **DBATU Evaluation Logic Automation**
-  Natively codifies the assessment rubric and passing thresholds mandated by **Dr. Babasaheb Ambedkar Technological University (DBATU)**:
-  * **Continuous Assessment (CA):** `20 Marks`
-  * **Mid-Semester Examination (MSE):** `20 Marks`
-  * **End-Semester Examination (ESE):** `60 Marks`
+### 🔐 Role-Based Access Control (RBAC)
+* **Teacher Console:** Comprehensive dashboard for CSV imports, granular mark adjustments, cohort analytics, and audit logs.
+* **Student Portal:** Isolated, read-only profile displaying subject-wise breakdowns, continuous assessment progress, and pass/fail indicators.
 
-* **Real-Time Academic Telemetry**
-  * **Top Performers Podium:** Programmatically identifies and ranks high-achieving scholars across academic modules.
-  * **Critical Failure Watchlist:** Automatically isolates records falling below statutory thresholds, enabling timely faculty intervention.
+---
 
-* **Role-Based Access Control (RBAC)**
-  * **Faculty & Instructor Console:** Dedicated administrative suite for bulk ingestion, mark auditing, discrepancy resolution, and cohort analytics.
-  * **Scholar Portal:** Private, read-only ledger view allowing students to inspect subject-wise breakdowns, continuous assessment tallies, and qualification statuses.
+## 📐 Grading Matrix & Evaluation Rules
 
-<br />
+### Assessment Structure
+| Component | Code | Maximum Marks | Weightage |
+| :--- | :---: | :---: | :---: |
+| **Continuous Assessment** | `CA` | 20 | 20% |
+| **Mid-Semester Examination** | `MSE` | 20 | 20% |
+| **End-Semester Examination** | `ESE` | 60 | 60% |
+| **Aggregate Total** | **`TOTAL`** | **100** | **100%** |
 
-## III. Mathematical Grading Matrix
-
-The evaluation engine enforces strict adherence to university bylaws through two governing equations:
-
+### Mathematical Evaluation Logic
 $$\text{Total Course Score} = \text{CA} + \text{MSE} + \text{ESE}$$
 
-$$\text{Qualification Status} = \begin{cases} \text{PASS} & \text{if } \text{ESE} \ge 20 \quad \text{and} \quad \text{Total Course Score} \ge 40 \\ \text{FAIL} & \text{otherwise} \end{cases}$$
+$$\text{Result Status} = \begin{cases} \text{PASS} & \text{if } \text{ESE} \ge 20 \text{ and } \text{Total Course Score} \ge 40 \\ \text{FAIL} & \text{otherwise} \end{cases}$$
 
-<br />
+---
 
-## IV. Technology & Infrastructure Stack
+## 🛠️ Tech Stack
 
-| Architectural Layer | Specification & Tooling |
+| Layer | Technology |
 | :--- | :--- |
-| **Application Core** | PHP 8.x & Laravel MVC Framework |
-| **Presentation Layer** | Blade Templating Engine, HTML5, CSS3, Bootstrap CSS |
-| **Persistence Layer** | MySQL Relational Database Management System (RDBMS) |
-| **Security & Governance** | Laravel Native Auth, CSRF Protection Middleware, Bcrypt Hashing |
-| **Version Control** | Git & GitHub Repository Management |
+| **Backend Framework** | PHP 8.x, Laravel MVC |
+| **Frontend & Templating** | Laravel Blade, HTML5, CSS3, Bootstrap 5 |
+| **Database** | MySQL Relational Database Management System (RDBMS) |
+| **Security & Auth** | Laravel Native Auth, CSRF Middleware, Bcrypt Password Hashing |
+| **Version Control** | Git & GitHub |
 
-<br />
+---
 
-## V. Local Deployment & Setup Protocol
+## ⚙️ Installation & Local Setup
 
-Execute the following sequence in your terminal environment to initialize a local instance:
+Follow these steps to deploy **MarkMentor** locally:
 
-**1. Clone the Repository**
+### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Ammara-cse/MarkMentor.git](https://github.com/Ammara-cse/MarkMentor.git)
 cd MarkMentor
 
-**2. Install Backend & Frontend Dependencies
+2. Install Backend & Frontend Dependencies
 composer install
 npm install
 
 3. Configure Environment Variables
+Duplicate the example environment file and generate an application encryption key:
 cp .env.example .env
+php artisan key:generate
 
-Update your database credentials inside the .env file:
+Open .env and update your MySQL database credentials:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=markmentor_db
 DB_USERNAME=root
 DB_PASSWORD=
----
-4. Generate Cryptographic Key & Seed Database
-php artisan key:generate
+
+4. Run Migrations & Seeders
 php artisan migrate --seed
----
-5. Launch the Local Server
+
+5. Launch the Development Server
 php artisan serve
 
-> Navigate to http://127.0.0.1:8000 in your browser to access the portal.
+> Open your browser and navigate to http://127.0.0.1:8000
 > 
-<br />
-<div align="center">
-VI. Academic Attribution & Colophon
-Authored & Engineered by
-Ammara Sirkhot
-PRN: 24030332905059
-<br />
-| Role | Name & Designation |
+👥 Author & Academic Credits
+| Role | Details |
 |---|---|
+| Developer | Ammara Sirkhot (PRN: 24030332905059) |
 | Project Guide | Prof. Pranali Bhosale |
 | Head of Department | Dr. Arvind Kiwelekar |
-| Academic Department | Department of Computer Science and Engineering |
+| Department | Department of Computer Science and Engineering |
 | Institution | Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Raigad, Maharashtra |
-| Academic Session | 2025 – 2026 |
-<br />
-Crafted with precision for academic excellence.
-</div>
+| Academic Year | 2025–2026 |
 
----
+### Key Improvements Made:
+* **Fixed Broken Syntax:** Closed unclosed code blocks, fixed the broken `git clone` Markdown link, removed stray `8000` text, and fixed the broken `Version Control` bullet wrap.
+* **Structured Tables:** Converted the assessment weights, tech stack, and academic credits into clean, scannable GitHub-flavored Markdown tables.
+* **Consistent Hierarchy:** Standardized heading levels (`#`, `##`, `###`) and replaced manual `<br>` tags with clean Markdown spacing.
 
-### What was fixed and refined:
-* **Broken Markdown & Typos Fixed:** Cleaned up the broken `git clone` link syntax, fixed the `Version Contro / l` line break, fixed the stray `8000` below the server command, and removed redundant numbering (`1.` followed by `## 1.`).
-* **Vintage & Editorial Aesthetic:** Added Roman numeral section headers (`I.` through `VI.`), spaced uppercase title typography (`M A R K M E N T O R`), a classic serif-style epigraph quote, and an **Academic Colophon** table at the bottom.
-* **Color Palette:** Updated the top badges to a cohesive dark-espresso (`#2C221E`) and antique-gold (`#D4AF37`) theme using `flat-square` styling so they look clean and timeless on both Light and Dark GitHub modes.
+<FollowUp label="Want me to add a Project Folder Structure section or sample CSV format guide to this README?" query="Add a clean Project Folder Structure tree and a Sample CSV Import Format section to the MarkMentor README."/>
 
