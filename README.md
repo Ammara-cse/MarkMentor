@@ -89,7 +89,7 @@ Execute the following sequence in your terminal environment to initialize a loca
 git clone [https://github.com/Ammara-cse/MarkMentor.git](https://github.com/Ammara-cse/MarkMentor.git)
 cd MarkMentor
 
-2. Install Backend & Frontend Dependencies
+**2. Install Backend & Frontend Dependencies
 composer install
 npm install
 
@@ -103,11 +103,11 @@ DB_PORT=3306
 DB_DATABASE=markmentor_db
 DB_USERNAME=root
 DB_PASSWORD=
-
+---
 4. Generate Cryptographic Key & Seed Database
 php artisan key:generate
 php artisan migrate --seed
-
+---
 5. Launch the Local Server
 php artisan serve
 
