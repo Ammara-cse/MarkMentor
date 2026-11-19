@@ -131,37 +131,6 @@ $$
 | ESE < 20 | 🔴 **FAIL** |
 | Total < 40 | 🔴 **FAIL** |
 
----
-
-## 🏗️ System Architecture
-
-```text
-                    ┌───────────────────────┐
-                    │       Students        │
-                    │   Read-only Portal    │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-┌──────────────────────────────────────────────────────┐
-│                    MarkMentor Portal                  │
-│                                                      │
-│  ┌──────────────────┐        ┌───────────────────┐  │
-│  │  Teacher Console │        │  Student Portal   │  │
-│  └────────┬─────────┘        └─────────┬─────────┘  │
-│           │                            │            │
-│           └──────────────┬─────────────┘            │
-│                          ▼                          │
-│                  ┌───────────────┐                  │
-│                  │ Laravel MVC   │                  │
-│                  │ Application    │                  │
-│                  └───────┬───────┘                  │
-│                          │                          │
-│                          ▼                          │
-│                  ┌───────────────┐                  │
-│                  │ MySQL Database│                  │
-│                  └───────────────┘                  │
-└──────────────────────────────────────────────────────┘
-
 
 ---
 
@@ -179,7 +148,7 @@ Version Control	Git & GitHub
 
 ---
 
-🔐 Security
+### 🔐 Security
 
 MarkMentor follows application-level security practices including:
 
@@ -193,7 +162,7 @@ MarkMentor follows application-level security practices including:
 
 ---
 
-📥 Data Processing Workflow
+### 📥 Data Processing Workflow
 
 CSV File
    │
@@ -220,7 +189,7 @@ Evaluation Engine
 
 ---
 
-⚙️ Installation & Local Setup
+### ⚙️ Installation & Local Setup
 
 Follow these steps to deploy MarkMentor locally.
 
@@ -268,7 +237,7 @@ http://127.0.0.1:8000
 
 ---
 
-📁 Project Workflow
+### 📁 Project Workflow
 
 User Login
     │
@@ -289,7 +258,7 @@ User Login
 
 ---
 
-🎯 Project Objectives
+### 🎯 Project Objectives
 
 MarkMentor aims to:
 
@@ -304,7 +273,7 @@ MarkMentor aims to:
 
 ---
 
-👥 Author & Academic Credits
+### 👥 Author & Academic Credits
 
 Role	Details
 
@@ -319,7 +288,7 @@ Academic Year	2025–2026
 
 ---
 
-🏛️ Academic Context
+### 🏛️ Academic Context
 
 Institution:
 Dr. Babasaheb Ambedkar Technological University (DBATU)
@@ -336,7 +305,7 @@ Academic Year:
 
 ---
 
-🌟 Why MarkMentor?
+### 🌟 Why MarkMentor?
 
 > From manual marks management to intelligent academic analytics.
 
@@ -347,7 +316,7 @@ MarkMentor transforms fragmented academic records into a structured digital syst
 
 ---
 
-📌 Project Status
+### 📌 Project Status
 
 MarkMentor is an academic software project developed to demonstrate practical implementation of:
 
