@@ -278,9 +278,13 @@ MarkMentor aims to:
 Role	Details
 
 Developer: 	Ammara Sirkhot
+
 Project Guide:	Prof Pranali Bhosale
+
 Head of Department	:Dr. Arvind Kiwelekar
+
 Department of Computer Science and Engineering
+
 Institution: 	Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Raigad, Maharashtra
 Academic Year	2025–2026
 
