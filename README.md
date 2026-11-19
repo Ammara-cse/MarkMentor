@@ -1,5 +1,4 @@
-Here is a clean, aesthetically polished, and professional README.md with fixed Markdown formatting, proper code blocks, structured tables, and balanced visual hierarchy:
-<div align="center">
+
 
 # 🎓 MarkMentor
 ### Smart Internal Marks Management & Academic Analytics Portal
