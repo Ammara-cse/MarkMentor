@@ -164,6 +164,8 @@ MarkMentor follows application-level security practices including:
 
 ### 📥 Data Processing Workflow
 
+
+```text
 CSV File
    │
    ▼
@@ -186,6 +188,7 @@ Evaluation Engine
    ├──► Failure Watchlist
    └──► Academic Analytics
 
+```
 
 ---
 
@@ -239,6 +242,7 @@ http://127.0.0.1:8000
 
 ### 📁 Project Workflow
 
+```text
 User Login
     │
     ├── Teacher
@@ -256,6 +260,7 @@ User Login
           └── View Result Status
 
 
+```
 ---
 
 ### 🎯 Project Objectives
